@@ -10,11 +10,13 @@ public class Simple {
         Camp.Login();
         Thread.sleep(2000);
         Camp.OTP();
-        Camp.click_Register();
-        Camp.Register_Customer();
+       // Camp.click_Register();
+        //Camp.Register_Customer();
         //Camp.Simple_Cmpn();
         //Camp.Simple_Rsnd();
         //Camp.Simple_Dlt();
+        Camp.loyalty();
+	
 	}
 
 }

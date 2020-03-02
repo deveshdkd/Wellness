@@ -45,7 +45,7 @@ import org.openqa.selenium.support.ui.Select;
 	 public  void OTP() throws InterruptedException
 	 {    	
 		 		driver.manage().timeouts().implicitlyWait(2000, TimeUnit.SECONDS);
-		 		driver.findElement(By.xpath("//*[@id=\"aTextbox1\"]")).sendKeys("518211"); //enter otp
+		 		driver.findElement(By.xpath("//*[@id=\"aTextbox1\"]")).sendKeys("559847"); //enter otp
 	        	driver.findElement(By.xpath("//*[@id=\"aTextbox\"]")).sendKeys("123456"); //enter passwrd
 	        	driver.findElement(By.xpath("//*[@id=\"subclick\"]")).click();
 	        	driver.manage().timeouts().implicitlyWait(4000, TimeUnit.SECONDS);
@@ -176,7 +176,7 @@ public  void Register_Customer() throws InterruptedException
 		 		dropdown10.selectByVisibleText("Mobile");
          
 		 		/* JavascriptExecutor js = (JavascriptExecutor) driver;
-         		js.executeScript("window.scrollBy(0,200)");
+         		/* js.executeScript("window.scrollBy(0,200)");
          		Thread.sleep(1000);
          
         
@@ -304,12 +304,79 @@ public void Simple_Dlt() throws InterruptedException
         
 	 }
 	 
-public void Auto_() throws InterruptedException
-	 
-	 
+public void loyalty() throws InterruptedException
 	 
 	 {
+				//Stage 1
+				driver.findElement(By.xpath("//*[@id=\"vmenu\"]/ul/li[2]/a/span")).click();
+				driver.findElement(By.xpath("//*[@id=\"vmenu\"]/ul/li[2]/div/ul/li[3]/a")).click();
+				
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/ul/li[1]/div[2]/div[2]/input")).clear();
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/ul/li[1]/div[2]/div[2]/input")).sendKeys("120");
+				
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/ul/li[1]/div[2]/div[2]/input")).clear();
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/ul/li[1]/div[2]/div[2]/input")).sendKeys("25 % Discount Loyalty");
 		 
+				driver.manage().timeouts().implicitlyWait(500, TimeUnit.SECONDS);
+		 		Select dropdown0 =new Select(driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/section/div/form/ul/li[1]/div[2]/div[4]/ul/li[1]/div/select")));   
+		 		dropdown0.selectByVisibleText("Rs.");
+		 		
+		 		driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/ul/li[1]/div[2]/div[4]/ul/li[2]/input")).clear();
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/ul/li[1]/div[2]/div[4]/ul/li[2]/input")).sendKeys("20.00");
+         
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/ul/li[1]/div[2]/div[4]/ul/li[3]/input")).clear();
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/ul/li[1]/div[2]/div[4]/ul/li[3]/input")).sendKeys("40");
+				
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/ul/li[1]/div[2]/div[4]/ul/li[4]/input")).clear();
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/ul/li[1]/div[2]/div[4]/ul/li[4]/input")).sendKeys("200");
+	 
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/ul/li[1]/div[2]/div[4]/ul/li[4]/input")).clear();
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/ul/li[1]/div[2]/div[4]/ul/li[4]/input")).sendKeys("200");
+	 
+				driver.manage().timeouts().implicitlyWait(500, TimeUnit.SECONDS);
+		 		Select dropdown1 =new Select(driver.findElement(By.xpath("//*[@id=\"discount_applicable_type\"]")));   
+		 		dropdown1.selectByVisibleText("Include Items");
+		 		
+		 		driver.findElement(By.id("checkAll")).click();
+		 		driver.findElement(By.id("apply_service")).click();
+		 		
+		 		driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/ul/li[1]/div[2]/div[4]/ul/li[6]/input")).clear();
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/ul/li[1]/div[2]/div[4]/ul/li[6]/input")).sendKeys("250");
+	 
+				
+				//Stage 2
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/ul/li[2]/div[2]/div[2]/input")).clear();
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/ul/li[2]/div[2]/div[2]/input")).sendKeys("251");
+				
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/ul/li[2]/div[2]/div[3]/input")).clear();
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/ul/li[2]/div[2]/div[3]/input")).sendKeys("35 % Discount Loyality");
+				
+				driver.manage().timeouts().implicitlyWait(1500, TimeUnit.SECONDS);
+		 		Select dropdown3 =new Select(driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/section/div/form/ul/li[2]/div[2]/div[4]/ul/li[1]/div/select")));   
+		 		dropdown3.selectByVisibleText("Rs.");
+		 		
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/ul/li[2]/div[2]/div[4]/ul/li[2]/input")).clear();
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/ul/li[2]/div[2]/div[4]/ul/li[2]/input")).sendKeys("35.00");
+				
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/ul/li[2]/div[2]/div[4]/ul/li[3]/input")).clear();
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/ul/li[2]/div[2]/div[4]/ul/li[3]/input")).sendKeys("45");
+				
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/ul/li[2]/div[2]/div[4]/ul/li[4]/input")).clear();
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/ul/li[2]/div[2]/div[4]/ul/li[4]/input")).sendKeys("555");
+				
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("window.scrollBy(0,400)");
+				Thread.sleep(2000);
+				driver.manage().timeouts().implicitlyWait(1500, TimeUnit.SECONDS);
+		 		Select dropdown4 =new Select(driver.findElement(By.xpath("//*[@id=\"discount_applicable_type\"]")));   
+		 		dropdown4.selectByVisibleText("Exclude Items");
+		 		Thread.sleep(2000);
+				driver.manage().timeouts().implicitlyWait(1500, TimeUnit.SECONDS);
+		 		driver.findElement(By.xpath("//*[@id=\"ordercategory_id_96\"]")).click();
+		 		Thread.sleep(2000);
+				driver.manage().timeouts().implicitlyWait(1500, TimeUnit.SECONDS);
+				driver.findElement(By.id("apply_service")).click();
+				
 	 }
 	 
 	 
