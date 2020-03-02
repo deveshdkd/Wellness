@@ -31,7 +31,7 @@ import org.openqa.selenium.support.ui.Select;
 		 		/*System.setProperty("webdriver.gecko.driver","D:\\Devesh automation\\geckodriver.exe");
 	    		driver = new FirefoxDriver();*/
 		 
-		 		System.setProperty("webdriver.chrome.driver","D:\\Devesh automation\\chromedriver.exe");
+		 		System.setProperty("webdriver.chrome.driver","C:\\Users\\chromedriver.exe");
 		 		driver = new ChromeDriver();
 	        	driver.manage().window().maximize();
 	        
