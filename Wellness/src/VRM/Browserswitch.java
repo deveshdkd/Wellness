@@ -13,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 //import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -28,10 +29,10 @@ import org.openqa.selenium.support.ui.Select;
 	 WebElement Firstname;
 	 public   void Login() 
 	 {
-		 		/*System.setProperty("webdriver.gecko.driver","D:\\Devesh automation\\geckodriver.exe");
-	    		driver = new FirefoxDriver();*/
+		 		//System.setProperty("webdriver.gecko.driver","D:\\Devesh automation\\geckodriver.exe");
+	    		//driver = new FirefoxDriver();
 		 
-		 		System.setProperty("webdriver.chrome.driver","C:\\Users\\chromedriver.exe");
+		 		System.setProperty("webdriver.chrome.driver","D:\\devesh automation\\chromedriver.exe");
 		 		driver = new ChromeDriver();
 	        	driver.manage().window().maximize();
 	        
@@ -45,10 +46,13 @@ import org.openqa.selenium.support.ui.Select;
 	 public  void OTP() throws InterruptedException
 	 {    	
 		 		driver.manage().timeouts().implicitlyWait(2000, TimeUnit.SECONDS);
-		 		driver.findElement(By.xpath("//*[@id=\"aTextbox1\"]")).sendKeys("559847"); //enter otp
+		 		driver.findElement(By.xpath("//*[@id=\"aTextbox1\"]")).sendKeys("977569"); //enter otp
 	        	driver.findElement(By.xpath("//*[@id=\"aTextbox\"]")).sendKeys("123456"); //enter passwrd
 	        	driver.findElement(By.xpath("//*[@id=\"subclick\"]")).click();
-	        	driver.manage().timeouts().implicitlyWait(4000, TimeUnit.SECONDS);
+	        	driver.manage().timeouts().implicitlyWait(2000, TimeUnit.SECONDS);
+	        	
+	        	
+	        	
      } 
  public void click_Register() 
  
@@ -110,7 +114,7 @@ public  void Register_Customer() throws InterruptedException
 
 	 public void Simple_Cmpn() throws InterruptedException 
 	 {
-		 		driver.findElement(By.xpath("//*[@id=\"vmenu\"]/ul/li[2]/a/span")).click();
+		 		driver.findElement(By.xpath("//*[@id=\"vmenu\"]/ul/li[2]/a")).click();
 		 		driver.findElement(By.xpath("//*[@id=\"vmenu\"]/ul/li[2]/div/ul/li[2]/a")).click();
 		 		driver.findElement(By.xpath("//*[@id=\"vhld\"]/section/aside[2]/div[1]/a")).click();
 		 		driver.findElement(By.xpath("//*[@id=\"campaign-left\"]/div[1]/div[1]/ul/li[1]/input")).sendKeys("NewCmpn");      //Cmpn name
@@ -175,8 +179,8 @@ public  void Register_Customer() throws InterruptedException
 		 		Select dropdown10 =new Select(driver.findElement(By.name("customer_source")));   
 		 		dropdown10.selectByVisibleText("Mobile");
          
-		 		/* JavascriptExecutor js = (JavascriptExecutor) driver;
-         		/* js.executeScript("window.scrollBy(0,200)");
+		 		JavascriptExecutor js = (JavascriptExecutor) driver;
+         		 js.executeScript("window.scrollBy(0,200)");
          		Thread.sleep(1000);
          
         
@@ -234,12 +238,12 @@ public  void Register_Customer() throws InterruptedException
         
         		js.executeScript("window.scrollBy(0,200)");
         		driver.findElement(By.id("sreciptestnew")).click();
-        		Thread.sleep(5000);
-        
+        		
+        		Thread.sleep(2000);
         		Select dropdown20 = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/div/form/div[1]/div[2]/div/section/div[1]/div[1]/ul/li[2]/div/select")));
         		dropdown20.selectByVisibleText("Create Date");
-        		Select dropdown21 = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/div/form/div[1]/div[2]/div/section/div[1]/div[1]/ul/li[2]/div/select")));
-        		dropdown21.selectByVisibleText("Create Date");
+        		//Select dropdown21 = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/div/form/div[1]/div[2]/div/section/div[1]/div[1]/ul/li[2]/div/select")));
+        		//dropdown21.selectByVisibleText("Create Date");
         
         		driver.findElement(By.name("datevisit1")).click();
         		Thread.sleep(1000);
@@ -258,22 +262,26 @@ public  void Register_Customer() throws InterruptedException
         		driver.findElement(By.xpath("/html/body/div[9]/div/div[2]/div/table/tbody/tr[3]/td[5]/a")).click(); 
         
         		driver.findElement(By.xpath("//*[@id=\"campaign-left\"]/div[1]/ul/li[5]/input")).click();
-        		driver.findElement(By.xpath("//*[@id=\"chcone\"]")).click();
+        		Thread.sleep(200);
+        		driver.findElement(By.xpath("//*[@id=\"campaign-left\"]/div[5]/input[1]")).click();									//finish
         
-        		driver.findElement(By.xpath("//*[@id=\"campaign-left\"]/div[5]/input[1]")).click();
+        		//driver.findElement(By.xpath("//*[@id=\"campaign-left\"]/div[5]/input[1]")).click();
         
-        		Thread.sleep(500);
-        		driver.findElement(By.xpath("//*[@id=\"campaign-step5\"]/div/section/div[5]/input[1]")).click();
+        		//Thread.sleep(500);
+        		//driver.findElement(By.xpath("//*[@id=\"campaign-step5\"]/div/section/div[5]/input[1]")).click();
         
-		 		 */
-		 		JavascriptExecutor js2 = (JavascriptExecutor) driver;
-		 		js2.executeScript("window.scrollBy(0,800)");
-		 		driver.findElements(By.name("campaign_target_code")).get(2).click();				//customer check
+		 		 
+		 		
+		 		//js2.executeScript("window.scrollBy(0,800)");
+		 		//driver.findElements(By.name("campaign_target_code")).get(2).click();				//customer check
          
+		 		//Thread.sleep(500);
+		 		//js2.executeScript("window.scrollBy(0,2000)");
+		 		//driver.findElement(By.name("finish")).click();
+		 		
 		 		Thread.sleep(500);
-		 		js2.executeScript("window.scrollBy(0,2000)");
-		 		driver.findElement(By.name("finish")).click();
-         
+		 		JavascriptExecutor js2 = (JavascriptExecutor) driver;
+		 		js2.executeScript("window.scrollBy(0,483)");
 		 		driver.findElement(By.xpath("//*[@id=\"campaign-step5\"]/div/section/div[5]/input[1]")).click();
          
        
@@ -307,6 +315,7 @@ public void Simple_Dlt() throws InterruptedException
 public void loyalty() throws InterruptedException
 	 
 	 {
+				
 				//Stage 1
 				driver.findElement(By.xpath("//*[@id=\"vmenu\"]/ul/li[2]/a/span")).click();
 				driver.findElement(By.xpath("//*[@id=\"vmenu\"]/ul/li[2]/div/ul/li[3]/a")).click();
@@ -368,7 +377,7 @@ public void loyalty() throws InterruptedException
 				js.executeScript("window.scrollBy(0,400)");
 				Thread.sleep(2000);
 				driver.manage().timeouts().implicitlyWait(1500, TimeUnit.SECONDS);
-		 		Select dropdown4 =new Select(driver.findElement(By.xpath("//*[@id=\"discount_applicable_type\"]")));   
+		 		Select dropdown4 =new Select(driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/section/div/form/ul/li[2]/div[2]/div[4]/ul/li[5]/label[2]/div/select")));   
 		 		dropdown4.selectByVisibleText("Exclude Items");
 		 		Thread.sleep(2000);
 				driver.manage().timeouts().implicitlyWait(1500, TimeUnit.SECONDS);
@@ -376,6 +385,49 @@ public void loyalty() throws InterruptedException
 		 		Thread.sleep(2000);
 				driver.manage().timeouts().implicitlyWait(1500, TimeUnit.SECONDS);
 				driver.findElement(By.id("apply_service")).click();
+				
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/div[1]/li[2]/div[1]/input")).clear();
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/div[1]/li[2]/div[1]/input")).sendKeys("1000");			//points per 1000
+				
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/div[1]/li[3]/div[1]/input")).clear();
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/div[1]/li[3]/div[1]/input")).sendKeys("10");			//POINTS VALIDITY (IN DAYS)
+				
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/div[1]/li[4]/div[1]/input")).clear();
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/div[1]/li[4]/div[1]/input")).sendKeys("2");			//REMINDER SEND (IN DAYS) BEFORE
+				
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/div[2]/ul/li[2]/div[1]/input")).clear();
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/div[2]/ul/li[2]/div[1]/input")).sendKeys("1");		//min points
+				
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/div[2]/ul/li[3]/div[1]/input")).clear();
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/div[2]/ul/li[3]/div[1]/input")).sendKeys("1");		//min bill
+				
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/div[2]/ul/li[4]/div[1]/input")).clear();
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/div[2]/ul/li[4]/div[1]/input")).sendKeys("1000");		//max points
+				
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/div[2]/ul/li[5]/div[1]/input")).clear();
+				driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/div[2]/ul/li[5]/div[1]/input")).sendKeys("1");		//points vs rs
+				
+				JavascriptExecutor js2 = (JavascriptExecutor) driver;
+		 		js2.executeScript("window.scrollBy(0,800)");
+				driver.findElement(By.xpath("//*[@id=\"popupDatepicker1\"]")).click();			//date popup
+		 		Thread.sleep(1000);
+				driver.manage().timeouts().implicitlyWait(2000, TimeUnit.SECONDS);
+		 		Select dropdown19 = new Select(driver.findElement(By.xpath("/html/body/div[11]/div/div[2]/div/div/select[2]")));		//year
+		 		dropdown19.selectByVisibleText("2023");
+		 		Select dropdown2 = new Select(driver.findElement(By.xpath("/html/body/div[11]/div/div[2]/div/div/select[1]")));			//month
+		 		dropdown2.selectByVisibleText("May");
+		 		driver.findElement(By.xpath("/html/body/div[11]/div/div[2]/div/table/tbody/tr[4]/td[5]/a")).click();				//date
+				
+		 		Thread.sleep(500);
+		 		driver.findElement(By.name("offer_no_days")).clear();
+		 		driver.findElement(By.name("offer_no_days")).sendKeys("10");			//no of days
+		 		
+		 		driver.findElement(By.name("offer_age")).clear();
+		 		driver.findElement(By.name("offer_age")).sendKeys("50");												//POINTS %
+		 		
+		 		driver.findElement(By.xpath("//*[@id=\"loyalty_form_points\"]/div[4]/input")).click();				//save
+		 		Thread.sleep(500);
+		 		driver.findElement(By.xpath("/html/body/div[12]/div/div/button")).click();
 				
 	 }
 	 

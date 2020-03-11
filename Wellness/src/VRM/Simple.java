@@ -12,10 +12,10 @@ public class Simple {
         Camp.OTP();
        // Camp.click_Register();
         //Camp.Register_Customer();
-        //Camp.Simple_Cmpn();
+        Camp.Simple_Cmpn();
         //Camp.Simple_Rsnd();
         //Camp.Simple_Dlt();
-        Camp.loyalty();
+        //Camp.loyalty();
 	
 	}
 
