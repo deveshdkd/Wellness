@@ -265,20 +265,6 @@ public  void Register_Customer() throws InterruptedException
         		Thread.sleep(200);
         		driver.findElement(By.xpath("//*[@id=\"campaign-left\"]/div[5]/input[1]")).click();									//finish
         
-        		//driver.findElement(By.xpath("//*[@id=\"campaign-left\"]/div[5]/input[1]")).click();
-        
-        		//Thread.sleep(500);
-        		//driver.findElement(By.xpath("//*[@id=\"campaign-step5\"]/div/section/div[5]/input[1]")).click();
-        
-		 		 
-		 		
-		 		//js2.executeScript("window.scrollBy(0,800)");
-		 		//driver.findElements(By.name("campaign_target_code")).get(2).click();				//customer check
-         
-		 		//Thread.sleep(500);
-		 		//js2.executeScript("window.scrollBy(0,2000)");
-		 		//driver.findElement(By.name("finish")).click();
-		 		
 		 		Thread.sleep(500);
 		 		JavascriptExecutor js2 = (JavascriptExecutor) driver;
 		 		js2.executeScript("window.scrollBy(0,483)");
