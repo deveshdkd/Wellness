@@ -46,7 +46,7 @@ import org.openqa.selenium.support.ui.Select;
 	 public  void OTP() throws InterruptedException
 	 {    	
 		 		driver.manage().timeouts().implicitlyWait(2000, TimeUnit.SECONDS);
-		 		driver.findElement(By.xpath("//*[@id=\"aTextbox1\"]")).sendKeys("977569"); //enter otp
+		 		driver.findElement(By.xpath("//*[@id=\"aTextbox1\"]")).sendKeys("726645"); //enter otp
 	        	driver.findElement(By.xpath("//*[@id=\"aTextbox\"]")).sendKeys("123456"); //enter passwrd
 	        	driver.findElement(By.xpath("//*[@id=\"subclick\"]")).click();
 	        	driver.manage().timeouts().implicitlyWait(2000, TimeUnit.SECONDS);
@@ -114,8 +114,8 @@ public  void Register_Customer() throws InterruptedException
 
 	 public void Simple_Cmpn() throws InterruptedException 
 	 {
-		 		driver.findElement(By.xpath("//*[@id=\"vmenu\"]/ul/li[2]/a")).click();
-		 		driver.findElement(By.xpath("//*[@id=\"vmenu\"]/ul/li[2]/div/ul/li[2]/a")).click();
+		 		driver.findElement(By.xpath("//*[@id=\"vmenu\"]/ul/li[3]/a/span")).click();
+		 		driver.findElement(By.xpath("//*[@id=\"vmenu\"]/ul/li[3]/div/ul/li[2]/a")).click();
 		 		driver.findElement(By.xpath("//*[@id=\"vhld\"]/section/aside[2]/div[1]/a")).click();
 		 		driver.findElement(By.xpath("//*[@id=\"campaign-left\"]/div[1]/div[1]/ul/li[1]/input")).sendKeys("NewCmpn");      //Cmpn name
 		 		driver.findElement(By.xpath(" //*[@id=\"chars_new\"]")).sendKeys("Text For Cmpn");		//Text For Cmpn
